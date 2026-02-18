@@ -29,7 +29,7 @@ Antes de rodar o projeto, você precisará de:
 
 1. Clone o repositório:
    ```bash
-   git clone [Clique aqui para ver o projeto](https://github.com/dennysalvesdev/meet-assistant.git)
+   git clone https://github.com/dennysalvesdev/meet-assistant.git
    ```
 
 2. Crie e ative seu ambiente virtual:
@@ -71,4 +71,4 @@ Antes de rodar o projeto, você precisará de:
 
 ---
 
-_Projeto desenvolvido por **Dennys Alves Silva** como parte dos estudos em Engenharia de Software na Jala University._   
+_Projeto desenvolvido por **Dennys Alves Silva** enquanto graduando em engenharia de software._   
