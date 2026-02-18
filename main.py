@@ -105,14 +105,24 @@ def transcrever_e_resumir():
         resumo = response.text
         
         # Salva o resultado
-        nome_arquivo = f"Resumo_Aula_{int(time.time())}.md"
-        with open(nome_arquivo, "w", encoding="utf-8") as f:
+     # --- INTEGRAÇÃO OBSIDIAN ---
+        # Configure aqui o caminho da pasta onde você guarda suas notas
+        # Dica: Use barras duplas \\ no Windows ou r"C:\..."
+        CAMINHO_OBSIDIAN = r"C:\Users\Dennys Alves\OneDrive\Documentos\Dennys\Obsidian" 
+        
+        # Garante que a pasta existe
+        os.makedirs(CAMINHO_OBSIDIAN, exist_ok=True)
+        
+        titulo_arquivo = f"Resumo_Aula_{int(time.time())}.md"
+        caminho_completo = os.path.join(CAMINHO_OBSIDIAN, titulo_arquivo)
+        
+        with open(caminho_completo, "w", encoding="utf-8") as f:
             f.write(resumo)
         
         print("\n" + "="*40)
-        print(f"✅ SUCESSO! Resumo salvo em: {nome_arquivo}")
+        print(f"✅ SUCESSO! Salvo no Obsidian: {titulo_arquivo}")
         print("="*40)
-        print(resumo) 
+        print(resumo)
 
     except Exception as e:
         print(f"❌ Erro na API do Gemini: {e}")
