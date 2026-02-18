@@ -3,11 +3,10 @@ import wave
 import whisper
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv # Importe novo
+from dotenv import load_dotenv
 import time
 
 load_dotenv()
-# --- CONFIGURAÇÕES DO DENNYS ---
 # Pega a chave de forma segura
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
