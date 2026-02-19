@@ -4,6 +4,13 @@ O **Meet-Assistant** é uma ferramenta de produtividade desenvolvida para auxili
 
 ## 🚀 Funcionalidades
 
+### v2.0 (Novo!)
+- **Interface Gráfica Flutuante**: Janela "Always on Top" para controle fácil durante a aula.
+- **Timer em Tempo Real**: Visualização precisa do tempo de gravação.
+- **Tema Dark Moderno**: Design visual confortável para longas sessões.
+- **Controle Total**: Inicie e pare a gravação a qualquer momento.
+
+### Core
 - **Captura de Áudio Interno**: Gravação de áudio do sistema (YouTube, Meet, Zoom) sem necessidade de microfone externo.
 - **Transcrição de Alta Precisão**: Utiliza o modelo **Whisper (OpenAI)** para converter fala em texto de forma eficiente.
 - **Resumo Inteligente**: Integração com a API do **Google Gemini** para estruturar títulos, tópicos principais e termos técnicos.
@@ -13,10 +20,10 @@ O **Meet-Assistant** é uma ferramenta de produtividade desenvolvida para auxili
 ## 🛠️ Tecnologias Utilizadas
 
 - **Linguagem**: Python 3.12+
-- **IA/NLP**: OpenAI Whisper (Local) e Google Gemini API (Nuvem)
+- **Interface**: CustomTkinter
+- **IA/NLP**: OpenAI Whisper e Google Gemini API
 - **Processamento de Áudio**: PyAudio e Wave
-- **Automação**: Python-dotenv
-- **Ambiente**: VS Code e Git
+- **Automação**: Threading e Python-dotenv
 
 ## 📋 Pré-requisitos
 
@@ -28,10 +35,11 @@ Antes de rodar o projeto, você precisará de:
 ## 🔧 Configuração Inicial
 
 1. Clone o repositório:
+   
    ```bash
-   git clone https://github.com/dennysalvesdev/meet-assistant.git
+   git clone [Clique aqui para acessar o projeto](https://github.com/dennysalvesdev/meet-assistant.git)
    ```
-
+   
 2. Crie e ative seu ambiente virtual:
     
     ```bash
@@ -42,7 +50,7 @@ Antes de rodar o projeto, você precisará de:
 3. Instale as dependências:
     
     ```bash
-    pip install pyaudio wave openai-whisper google-generativeai python-dotenv
+    pip install -r requirements.txt
     ```
     
 4. Crie um arquivo `.env` na raiz e adicione sua chave:
@@ -55,18 +63,23 @@ Antes de rodar o projeto, você precisará de:
     
 
 ## 📝 Como Usar
+   
+   Opção A: Interface Gráfica (Recomendado)
+   Para ter o controle flutuante com timer e botão de parar:
+    
+    python app_gui.py
+    
 
-1. Execute o script principal:
-    
-    Bash
-    
-    ```
+   Opção B: Modo CLI (Linha de Comando)
+   Para gravações rápidas ou automatizadas via terminal:
+
     python main.py
-    ```
     
+
+## Passos Gerais:
+1. Execute uma das ações acima.
 2. Dê o play no vídeo ou inicie sua reunião.
-    
-3. Ao final do tempo definido, o resumo será gerado e enviado automaticamente para a pasta configurada do seu **Obsidian**.
+3. Ao clicar em "Parar" (ou finalizar o tempo), o resumo será gerado e enviado automaticamente para a pasta configurada do seu **Obsidian**.
     
 
 ---
